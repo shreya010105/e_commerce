@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cors({
     origin: [
         "http://localhost:3000",
-        "https://ecommerce-sooty-rho.vercel.app/",
+        "https://e-commerce-theta-vert.vercel.app/",
         "https://admin-ecommerce-chi.vercel.app/"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
