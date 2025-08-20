@@ -14,8 +14,8 @@ app.use(express.json());
 app.use(cors({
     origin: [
         "http://localhost:3000",
-        "https://e-commerce-theta-vert.vercel.app/",
-        "https://admin-ecommerce-chi.vercel.app/"
+        "https://e-commerce-theta-vert.vercel.app",
+        "https://admin-ecommerce-chi.vercel.app"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
