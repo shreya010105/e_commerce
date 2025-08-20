@@ -13,6 +13,7 @@ const port = 4000;
 app.use(express.json());
 app.use(cors({
     origin: [
+        "http://localhost:3000",
         "https://ecommerce-sooty-rho.vercel.app/",
         "https://admin-ecommerce-chi.vercel.app/"
     ],
