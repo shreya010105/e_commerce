@@ -11,7 +11,14 @@ const app = express();
 const port = 4000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: [
+        "https://ecommerce-sooty-rho.vercel.app/",
+        "https://admin-ecommerce-chi.vercel.app/"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 
 // Ensure upload directory exists
 const uploadDir = './upload/images';

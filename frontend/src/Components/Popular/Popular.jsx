@@ -7,7 +7,7 @@ const Popular = () => {
   useEffect(()=>{
     const fetchPopular = async() => {
       try{
-        const response = await fetch('http://localhost:4000/popularInWomen');
+        const response = await fetch('https://ecommerce-zizq.onrender.com/popularInWomen');
         const data = await response.json();
         setPopular(data);
       }

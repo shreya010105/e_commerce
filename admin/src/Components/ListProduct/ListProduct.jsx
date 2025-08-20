@@ -7,7 +7,7 @@ const ListProduct = () => {
 
   useEffect(()=>{
     const fetchInfo = async() => {
-    await fetch('http://localhost:4000/allProducts')
+    await fetch('https://ecommerce-zizq.onrender.com/allProducts')
     .then((res)=>res.json())
     .then((data)=>{setAllProducts(data)});
   }
@@ -15,7 +15,7 @@ const ListProduct = () => {
   },[])
 
   const remove_product = async(id) => {
-    await fetch('http://localhost:4000/removeProduct',{
+    await fetch('https://ecommerce-zizq.onrender.com/removeProduct',{
       method:'POST',
       headers:{
           Accept:'application/json',
@@ -24,7 +24,7 @@ const ListProduct = () => {
       body:JSON.stringify({id:id})
       
     })
-     const res = await fetch('http://localhost:4000/allProducts');
+     const res = await fetch('https://ecommerce-zizq.onrender.com/allProducts');
      const data = await res.json();
      setAllProducts(data);
   }

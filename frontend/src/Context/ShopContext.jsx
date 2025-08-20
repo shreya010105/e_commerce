@@ -29,11 +29,11 @@ const ShopContextProvider = ({children}) => {
     useEffect(()=>{
         const fetchProduct = async() => {
             try{
-                const response = await fetch('http://localhost:4000/allProducts');
+                const response = await fetch('https://ecommerce-zizq.onrender.com/allProducts');
                 const data = await response.json();
                 setAll_Product(data);
                 if(localStorage.getItem('auth-token')){
-                    fetch('http://localhost:4000/getcart',{
+                    fetch('https://ecommerce-zizq.onrender.com/getcart',{
                         method:'POST',
                         headers:{
                             Accept:'application/form-data',
@@ -59,7 +59,7 @@ const addToCart = (itemId) => {
     [itemId]: prev[itemId] + 1
   }));
 if(localStorage.getItem('auth-token')){
-    fetch('http://localhost:4000/addtocart', {
+    fetch('https://ecommerce-zizq.onrender.com/addtocart', {
   method: 'POST',
   headers: {
     Accept:'application/form-data',
@@ -84,7 +84,7 @@ if(localStorage.getItem('auth-token')){
             [itemId]:prev[itemId] - 1
         }) );
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/removefromcart', {
+            fetch('https://ecommerce-zizq.onrender.com/removefromcart', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

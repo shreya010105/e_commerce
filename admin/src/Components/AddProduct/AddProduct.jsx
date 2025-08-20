@@ -21,7 +21,7 @@ const AddProduct = () => {
     let formData = new FormData();
     formData.append('product',image);
 
-    await fetch('http://localhost:4000/upload',
+    await fetch('https://ecommerce-zizq.onrender.com/upload',
       {
       method:'POST',
       headers:{
@@ -33,7 +33,7 @@ const AddProduct = () => {
     if(response.success){
       product.image = response.image_url;
       console.log(product);
-      await fetch('http://localhost:4000/addProduct',
+      await fetch('https://ecommerce-zizq.onrender.com/addProduct',
         {
           method:'POST',
           headers:{

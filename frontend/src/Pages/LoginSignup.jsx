@@ -16,7 +16,7 @@ const LoginSignup = () => {
   const login = async() => {
     console.log("login ",{name,email,password});
     let response;
-    await fetch('http://localhost:4000/login',
+    await fetch('https://ecommerce-zizq.onrender.com/login',
       {
           method:'POST',
           headers:{
@@ -41,7 +41,7 @@ const LoginSignup = () => {
   console.log("signup", { name, email, password });
 
   try {
-    const response = await fetch("http://localhost:4000/signup", {
+    const response = await fetch("https://ecommerce-zizq.onrender.com/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json", // Correct header
